@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+:root {
+   font-family: "Lato", sans-serif;
+   font-weight: 100;
+   font-style: normal;
+   --primary-color: #EE6E73;
+   --secondary-color: #FFFFFF;
+   --dark-color: #000000;
+   --background-color: #16192A;
+}
+
+body {
+   grid-template-areas: "header"
+      "main"
+      "productos"
+      "footer";
+   grid-template-rows: auto auto 1fr auto auto;
+   grid-template-columns: 1fr;
+   color: var(--text-color);
+
+   header {
+      grid-area: header;
+      width: 100%;
+      background-color: var(--primary-color);
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--text-color);
+      position: fixed;
+      z-index: 10;
+
+      h2 {
+         color: var(--secondary-color);
+         padding: 0.5rem 1rem;
+      }
+
+      nav {
+         font-weight: 400;
+
+         ul {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            list-style: none;
+            text-align: center;
+
+            li {
+               display: inline-block;
+               padding: 0 1rem;
+
+               a {
+                  padding: 0.5rem 0.75rem;
+                  text-decoration: none;
+                  color: var(--secondary-color);
+                  border: 1px solid var(--secondary-color);
+                  border-radius: 10px;
+                  transition: all 0.3s ease-in-out;
+               }
+
+               & a:hover {
+                  font-weight: 500;
+                  color: var(--primary-color);
+                  background-color: var(--secondary-color);
+                  border-radius: 10px;
+               }
+            }
+
+            li:last-child {
+               display: flex;
+               align-items: center;
+               justify-content: center;
+
+               a {
+                  border: none;
+                  padding: 0.5rem;
+                  position: relative;
+               }
+
+               a:hover {
+                  border-radius: 50%;
+
+                  .count {
+                     color: var(--secondary-color);
+                     background-color: var(--primary-color);
+                     border: 1px solid var(--secondary-color);
+                  }
+               }
+
+               .count {
+                  position: absolute;
+                  bottom: 0;
+                  left: 0;
+                  font-size: 12px;
+                  color: var(--primary-color);
+                  background-color: var(--secondary-color);
+                  padding: 0 0.25rem;
+                  border: 1px solid var(--primary-color);
+                  border-radius: 50%;
+               }
+            }
+         }
+      }
+   }
+
+   main {
+      grid-area: main;
+      background-image: url(https://pasarelasdepagos.s3.amazonaws.com/wp-content/uploads/2023/05/ecommerce-peru.jpeg);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-blend-mode: lighten;
+      height: 40vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: var(--secondary-color);
+      text-shadow: 2px 1px 4px var(--background-color);
+
+      h1 {
+         padding-top: 1rem;
+      }
+   }
+
+   section {
+      grid-area: productos;
+      text-align: center;
+      color: var(--primary-color);
+
+      h2 {
+         margin: 2rem;
+      }
+
+      .container {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-evenly;
+
+         .card {
+            width: 250px;
+            background-color: var(--secondary-color);
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+
+            a {
+               text-decoration: none;
+
+               img {
+                  width: 100%;
+                  border-radius: .5rem 0.5rem 0 0;
+                  transition: filter 0.3s ease-in-out;
+               }
+
+               img:hover {
+                  filter: saturate(1);
+               }
+
+               .item {
+                  width: auto;
+                  margin-top: 1rem;
+
+                  h3 {
+                     font-size: 1.2rem;
+                     margin-bottom: 0.5rem;
+                     color: var(--background-color);
+                  }
+
+                  p:first-of-type {
+                     padding: 0rem 0.25rem;
+                     font-size: 0.9rem;
+                     font-weight: 300;
+                     line-height: 130%;
+                     letter-spacing: 1px;
+                     color: var(--background-color);
+                  }
+
+                  p:last-of-type {
+                     padding: 1rem 0.25rem;
+                     font-size: 1.2rem;
+                     font-weight: 400;
+                     line-height: 130%;
+                     letter-spacing: 1px;
+                     color: var(--background-color);
+                  }
+               }
+            }
+
+            button {
+               padding: 0.25rem 0.75rem;
+               background-color: var(--secondary-color);
+               color: var(--primary-color);
+               border: 1px solid var(--primary-color);
+               border-radius: 10px;
+               font-size: 1.2rem;
+               margin-bottom: 1rem;
+               transition: all 0.3s ease-in-out;
+            }
+
+            button:hover {
+               background-color: var(--primary-color);
+               color: var(--secondary-color);
+               border: 1px solid var(--secondary-color);
+               transform: scale(1.1);
+            }
+         }
+
+         .card:hover {
+            background: linear-gradient(to bottom right, #e0e0e0, #f0f0f0);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            transform: scale(1.1) translateY(-5px);
+         }
+      }
+   }
+
+   .tableProduct {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin: 0 auto;
+      width: 40rem;
+
+      .table {
+         thead {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            
+            tr th {
+               border-radius: 10px;
+               padding: 0.5rem;
+            }
+         }
+
+         tbody {
+            background-color: var(--secondary-color);
+            color: var(--background-color);
+            font-weight: 500;
+
+            tr td {
+               border: 1px solid var(--background-color);
+               border-radius: 10px;
+               padding: 0.5rem;
+            }
+         }
+      }
+
+      p {
+         font-size: 1.2rem;
+         color: var(--dark-color);
+         font-weight: 600;
+         margin-top: 1rem;
+         text-align: end;
+      }
+   }
+
+   footer {
+      grid-area: footer;
+      background-color: var(--primary-color);
+      padding: 1rem 2rem;
+      margin-top: 2rem;
+      text-align: center;
+      color: var(--secondary-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row-reverse;
+
+      p {
+         margin: 0.5rem 0;
+         font-size: 1.2rem;
+         font-weight: 300;
+      }
+
+      .contact {
+         display: flex;
+         align-items: center;
+         gap: 1rem;
+
+         i {
+            font-size: 1.2rem;
+         }
+
+         i:hover {
+            transform: scale(1.1);
+         }
+      }
+   }
+}
