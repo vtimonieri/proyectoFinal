@@ -5,24 +5,30 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="./css/style.css">
-   <title>Pre-Entrega</title>
+   <title>Entrega Final</title>
 </head>
 
 <body>
 
    <header>
-      <h2>Maquetado Entrega Final</h2>
+      <h2>Cuatro Patas y algo más</h2>
+      <img src="./images/logo.png" alt="logo">
       
       <nav>
          <ul>
+            
+
             <li>
                <a href="#">Inicio</a>
+            </li>
+            <li>
+               <a href="./pages/interes.html">Inicio</a>
             </li>
             <li>
                <a href="#products">Productos</a>
             </li>
             <li>
-               <a href="https://web.whatsapp.com/" target="_blank">Contacto</a>
+               <a href="./pages/contacto.html" target="_blank">Contacto</a>
             </li>
             <li>
                <a href="./pages/productos.html" onclick="handleCart()">
@@ -39,22 +45,22 @@
 
    <main>
 
-      <h1>Shop in Style</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <h1>Tienda con Estilo </h1>
+      <h2>Accesorios para tu mascota.</h2>
 
    </main>
 
    <section id="products" >
-      <h2>Sección de Productos</h2>
+      <h2>Productos para tu mascota</h2>
       <div class="container">
        
          <div class="card">
             <a href="./pages/producto.html">
-               <img src="https://picsum.photos/200/200?random=1" alt="Imagen del Product">
+               <img src="./images/collares.jfif" alt="Imagen del Product">
                <div class="item">
-                  <h3>Producto 1</h3>
-                  <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, necessitatibus.</p>
-                  <p class="precio">$123.456,00</p>
+                  <h3>Collares</h3>
+                  <p class="description">Collares para perros , todos los tamaños y colores.</p>
+                  <p class="precio">$12.500,00</p>
                </div>
             </a>
             <button>Comprar</button>
@@ -62,11 +68,11 @@
 
          <div class="card">
             <a href="./pages/producto.html">
-               <img src="https://picsum.photos/200/200?random=2" alt="Imagen del Product">
+               <img src="./images/comederos.jfif" alt="Imagen del Product">
                <div class="item">
-                  <h3>Producto 2</h3>
-                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, necessitatibus.</p>
-                  <p>$123.456,00</p>
+                  <h3>Comederos</h3>
+                  <p>Comederos varios tamaños, de madera y acero inoxidable.</p>
+                  <p>$30.000,00</p>
                </div>
             </a>
             <button >Comprar</button>
@@ -74,11 +80,11 @@
 
          <div class="card">
             <a href="./pages/producto.html">
-               <img src="https://picsum.photos/200/200?random=3" alt="Imagen del Product">
+               <img src="./images/pretales.jfif" alt="Imagen del Product">
                <div class="item">
-                  <h3>Producto 3</h3>
-                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, necessitatibus.</p>
-                  <p>$123.456,00</p>
+                  <h3>Pretales</h3>
+                  <p>Pretales para perros , reforzados y de todos los tamaños.</p>
+                  <p>$50.000</p>
                </div>
             </a>
             <button >Comprar</button>
@@ -86,11 +92,11 @@
 
          <div class="card">
             <a href="./pages/producto.html">
-               <img src="https://picsum.photos/200/200?random=4" alt="Imagen del Product">
+               <img src="./images/chapitas.jfif" alt="Imagen del Product">
                <div class="item">
-                  <h3>Producto 4</h3>
-                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, necessitatibus.</p>
-                  <p>$123.456,00</p>
+                  <h3>Chapitas identificatorias</h3>
+                  <p>Chapitas para tu mascota, en varios motivos y colores.</p>
+                  <p>$45.000</p>
                </div>
             </a>
             <button >Comprar</button>
@@ -99,15 +105,34 @@
       </div>
    </section>
 
-   <footer>
-      <div class="contact">
-         <p>Contactanos</p>
-         <i class="fa-brands fa-whatsapp"></i>
-         <i class="fa-brands fa-instagram"></i>
-      </div>
-      <p>Talento Tech - @2024 All rights reserved</p>
-   </footer>
+ 
+     <!-- Footer -->
+     <footer class="footer">
+       <div class="footer-content">
+         <!-- Dirección -->
+         <div class="address">
+           <p><strong>Dirección:</strong></p>
+           <p>Calle Dorrego N° 1025 - Dorrego - Guaymallén - Mendoza</p>
+         </div>
+         
+         <!-- Redes Sociales -->
+         <div class="social-media">
+           <p><strong>Síguenos:</strong></p>
+           <a href="#" target="_blank" class="social-icon facebook">Facebook</a>
+           <a href="#" target="_blank" class="social-icon twitter">Twitter</a>
+           <a href="#" target="_blank" class="social-icon instagram">Instagram</a>
+         </div>
+   
+         <!-- Política de privacidad -->
+         <div class="privacy-policy">
+           <a href="/politica-de-privacidad" target="_blank">Política de privacidad</a>
+         </div>
+       </div>
+       <p>&copy; 2024 Tienda Mascotas. Todos los derechos reservados.</p>
+     </footer>
+   
 
+     
    <script src="https://kit.fontawesome.com/e1f0fdc958.js" crossorigin="anonymous"></script>
    <script src="./js/script.js"></script>
 </body>

@@ -74,7 +74,9 @@ function handleCart() {
    carritoContainer.appendChild(tabla);
 
    let precioFinal = document.createElement('p')
-   precioFinal.innerText = `Total a pagar: $${total}`;
+   precioFinal.innerText = `Total a pagar: $${total.toFixed(2)}`;
+
+
 
    carritoContainer.appendChild(precioFinal);
 

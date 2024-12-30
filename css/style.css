@@ -17,6 +17,7 @@
    --background-color: #16192A;
 }
 
+
 body {
    grid-template-areas: "header"
       "main"
@@ -27,16 +28,12 @@ body {
    color: var(--text-color);
 
    header {
-      grid-area: header;
-      width: 100%;
-      background-color: var(--primary-color);
-      padding: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      color: var(--text-color);
-      position: fixed;
-      z-index: 10;
+background-color: rgb(32, 105, 81);
+width: 100%;
+height: 100%;
+margin: auto;
+padding: 20px;
+border: 5px solid blue;
 
       h2 {
          color: var(--secondary-color);
@@ -113,7 +110,7 @@ body {
 
    main {
       grid-area: main;
-      background-image: url(https://pasarelasdepagos.s3.amazonaws.com/wp-content/uploads/2023/05/ecommerce-peru.jpeg);
+      background-image:url(../images/perros.jpg);
       background-repeat: no-repeat;
       background-size: 100% 100%;
       background-blend-mode: lighten;
@@ -123,19 +120,228 @@ body {
       align-items: center;
       color: var(--secondary-color);
       text-shadow: 2px 1px 4px var(--background-color);
+      border:5px solid var(--dark-color);
 
       h1 {
          padding-top: 1rem;
       }
    }
+/* Sección de Donaciones */
+.donations {
+   background-color: #882e58;
+   padding: 40px 10px;
+   margin: 50px auto;
+   border-radius: 8px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   max-width: 800px;
+   text-align: center;
+   width: 100%;
+ 
+}
+
+
+.donations h2 {
+   font-size: 2rem;
+   color: white;
+   margin-bottom: 15px;
+}
+
+.donations p {
+   font-size: 1rem;
+   color: #555;
+   margin-bottom: 20px;
+}
+
+.donation-form {
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+   padding: 20px;
+   background-color: #f9f9f9;
+   border-radius: 8px;
+}
+
+.donation-form label {
+   font-size: 1rem;
+   font-weight: bold;
+   margin-bottom: 5px;
+}
+
+.donation-form input,
+.donation-form textarea {
+   padding: 10px;
+   border: 1px solid #ddd;
+   border-radius: 4px;
+   font-size: 1rem;
+   width: 100%;
+}
+
+.donation-form button {
+   background-color: #882e58;
+   color: white;
+   font-size: 1.1rem;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+.donation-form button:hover {
+   background-color: #0e4134;
+}
+
+/* Sección de Contacto */
+.contact {
+   background-color: #882e58;
+   padding: 40px 20px;
+   margin: 50px auto;
+   border-radius: 8px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   max-width: 800px;
+   text-align: center;
+   width: 100%;
+   height: 100%;
+}
+
+.contact h2 {
+   font-size: 2rem;
+   color: white;
+   margin-bottom: 15px;
+}
+
+.contact p {
+   font-size: 1rem;
+   color: #555;
+   margin-bottom: 20px;
+}
+
+.contact-form {
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+   padding: 20px;
+   background-color: #f9f9f9;
+   border-radius: 8px;
+}
+
+.contact-form label {
+   font-size: 1rem;
+   font-weight: bold;
+   margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+   padding: 10px;
+   border: 1px solid #ddd;
+   border-radius: 4px;
+   font-size: 1rem;
+   width: 100%;
+}
+
+.contact-form button {
+   background-color: #882e58;
+   color: white;
+   font-size: 1.1rem;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+   background-color: #1b3b22;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+   .donations, .contact, .nutricion {
+       padding: 20px;
+       margin: 20px;
+   }
+
+   .donations h2, .contact h2 {
+       font-size: 1.8rem;
+   }
+
+   .donation-form, .contact-form {
+       padding: 15px;
+   }
+}
+
+/*asesoramiento*/
+ .asesoramiento{
+
+   font-size: 1rem;
+   color: rgb(235, 135, 135);
+   margin-bottom: 10px;
+ }  
+
+/*nutricion*/
+
+.nutricion {
+   background-color: #882e58;
+   padding: 40px 20px;
+   margin: 50px auto;
+   border-radius: 8px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   max-width: 800px;
+   text-align: center;
+   width: 100%;
+   height: 100%;
+}
+
+
+
+.nutricion h2 {
+   font-size: 2rem;
+   color: white;
+   margin-bottom: 15px;
+}
+
+.nutricion p {
+   font-size: 1rem;
+   color: #555;
+   margin-bottom: 20px;
+}
+
+.nutricion-boton {
+   background-color: #882e58;
+   color: white;
+   font-size: 1.1rem;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+.nutricion-form button:hover {
+   background-color: #1b3b22;
+}
+
+
+
+}
+
+
 
    section {
       grid-area: productos;
       text-align: center;
       color: var(--primary-color);
-
+      margin-bottom: 2rem;
+    
       h2 {
-         margin: 2rem;
+         margin: 2rem 0;
+      }
+
+      p {
+         padding-top: 1rem;
+         
+
       }
 
       .container {
@@ -174,7 +380,7 @@ body {
                   }
 
                   p:first-of-type {
-                     padding: 0rem 0.25rem;
+                      padding: 0.60rem 0.20rem;
                      font-size: 0.9rem;
                      font-weight: 300;
                      line-height: 130%;
@@ -183,7 +389,7 @@ body {
                   }
 
                   p:last-of-type {
-                     padding: 1rem 0.25rem;
+                     padding: 0.60rem 0.20rem;
                      font-size: 1.2rem;
                      font-weight: 400;
                      line-height: 130%;
@@ -194,7 +400,7 @@ body {
             }
 
             button {
-               padding: 0.25rem 0.75rem;
+               padding: 0.20rem 0.70rem;
                background-color: var(--secondary-color);
                color: var(--primary-color);
                border: 1px solid var(--primary-color);
@@ -260,36 +466,116 @@ body {
       }
    }
 
-   footer {
-      grid-area: footer;
-      background-color: var(--primary-color);
-      padding: 1rem 2rem;
-      margin-top: 2rem;
+   section {
+      grid-area: asesoramiento;
       text-align: center;
-      color: var(--secondary-color);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-direction: row-reverse;
+      color: var(--primary-color);
+      margin-bottom: 2rem;
+    
+      h2 {
+         margin: 2rem 0;
+      }
 
       p {
-         margin: 0.5rem 0;
-         font-size: 1.2rem;
-         font-weight: 300;
+         padding-top: 1rem;
+         
+
       }
 
-      .contact {
-         display: flex;
-         align-items: center;
-         gap: 1rem;
+   }
 
-         i {
-            font-size: 1.2rem;
-         }
+/* Estilo para el PDF incrustado */
+#nutricion object, #nutricion embed {
+   width: 100%;
+   height: 400px; /* Altura ajustable */
+   border-radius: 8px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-         i:hover {
-            transform: scale(1.1);
-         }
-      }
+@media (max-width: 768px) {
+   #nutricion object, #nutricion embed {
+       height: 300px; /* Reduce la altura en pantallas pequeñas */
    }
 }
+
+   footer {
+      background-color: rgb(32, 105, 81);
+      width: 100%;
+      height: 100%;
+      margin: auto;
+      padding: 20px;
+      border: 5px solid blue;
+       display: flex;
+      flex-direction: column;
+      color: var(--secondary-color);
+      text-shadow: 2px 1px 4px var(--background-color);
+
+     
+      .footer .footer-content {
+         display: flex;
+         justify-content: space-between; /* Espacio entre la dirección y redes sociales */
+         align-items: center; /* Alineación vertical centrada */
+         max-width: 1200px;
+         margin: 0 auto;
+       }
+       
+       .footer .address,
+       .footer .social-media {
+         margin-bottom: 0;
+       }
+       
+       /* Estilo para la dirección */
+       .footer .address p {
+         margin: 5px 0;
+       }
+       
+       /* Estilo para las redes sociales */
+       .footer .social-media {
+         text-align: right; /* Alineamos los enlaces a la derecha */
+       }
+       
+       .footer .social-media a {
+         text-decoration: none;
+         color: #fff;
+         margin: 0 10px;
+         font-size: 16px;
+         transition: color 0.3s;
+       }
+       
+       .footer .social-media a:hover {
+         color: #f39c12; /* Color de hover */
+       }
+       
+       /* Estilo para la política de privacidad */
+       .footer .privacy-policy a {
+         text-decoration: none;
+         color: #fff;
+         font-size: 14px;
+         transition: color 0.3s;
+       }
+       
+       .footer .privacy-policy a:hover {
+         color: #f39c12; /* Color de hover */
+       }
+       
+       /* Responsive */
+       @media (max-width: 768px) {
+         .footer-content {
+           flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+           text-align: left; /* Alinear los elementos a la izquierda */
+         }
+       
+         .footer .social-media {
+           margin-top: 10px;
+           text-align: left; /* Alineación izquierda en pantallas pequeñas */
+         }
+       
+         .footer .social-media a {
+           display: inline-block;
+           margin: 5px 0;
+         }
+       }     
+
+
+      }
+  }
